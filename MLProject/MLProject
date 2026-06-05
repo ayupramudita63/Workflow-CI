@@ -1,7 +1,25 @@
 name: heart-ci-project
+
 conda_env: conda.yaml
+
 entry_points:
   main:
     parameters:
-      data_file: {type: string, default: "heart_preprocessed.csv"}
-    command: "python modelling.py {data_file}"
+      data_file:
+        type: string
+        default: "heart_preprocessing/heart_preprocessed.csv"
+      n_estimators:
+        type: int
+        default: 100
+      max_depth:
+        type: int
+        default: 10
+      test_size:
+        type: float
+        default: 0.2
+    command: >
+      python modelling.py
+        --data_file    {data_file}
+        --n_estimators {n_estimators}
+        --max_depth    {max_depth}
+        --test_size    {test_size}
