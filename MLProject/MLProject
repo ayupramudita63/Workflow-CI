@@ -1,0 +1,7 @@
+name: heart-ci-project
+conda_env: conda.yaml
+entry_points:
+  main:
+    parameters:
+      data_file: {type: string, default: "heart_preprocessed.csv"}
+    command: "python modelling.py {data_file}"
