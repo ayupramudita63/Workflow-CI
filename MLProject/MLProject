@@ -1,5 +1,3 @@
-name: heart-ci-project
-
 conda_env: conda.yaml
 
 entry_points:

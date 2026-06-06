@@ -19,7 +19,6 @@ on:
         description: 'Proporsi data test (0.0 - 1.0)'
         required: false
         default: '0.2'
-
 jobs:
   train:
     name: Train via MLflow Project
